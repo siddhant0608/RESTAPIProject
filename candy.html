@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <form onsubmit="saveToNetwork(event)">
+            <h1>Candy Stock Checker</h1>
+            <label for="CandyName">CandyName:</label>
+            <select id="CandyName" required>
+                <option disabled selected>Select Candy</option>
+                <option>Melody</option>
+                <option>Eclair</option>
+                <option>Pulse</option>
+                <option>Rock Candy</option>
+            </select>
+            <label for="Description">Description:</label>
+            <input type="text" name="Description" id="Description" required>
+            <label for="Price">Price:</label>
+            <input type="number" name="Price" id="Price" required>
+            <label for="Quantity">Quantity:</label>
+            <input type="number" name="Quantity" id="Quantity" required>
+            <button>Add Item</button>
+        </form>
+    </fieldset>
+    <ul id="listOfitems"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="candy.js"></script>
+</body>
+
+</html>
